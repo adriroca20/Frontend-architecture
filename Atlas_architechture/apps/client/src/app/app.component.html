@@ -1,0 +1,10 @@
+<div class="app-wrapper">
+  <nav>
+    <mat-chip-listbox aria-label="Routes">
+      <mat-chip-option [routerLink]="'drivers/'">Drivers</mat-chip-option>
+      <mat-chip-option [routerLink]="'teams/'" disabled>Teams</mat-chip-option>
+      <mat-chip-option [routerLink]="'races/'">Races</mat-chip-option>
+    </mat-chip-listbox>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

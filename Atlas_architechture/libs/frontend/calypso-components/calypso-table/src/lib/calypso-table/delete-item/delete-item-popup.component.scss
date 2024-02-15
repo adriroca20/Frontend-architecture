@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  padding: 12px 0 12px 12px;
+  background-color: #27324c;
+  border-bottom: 1px solid #8798b1;
+  color: white;
+  font-size: 18px;
+}
+
+.content {
+  margin: 0 12px;
+}
+
+.buttons-section {
+  display: flex;
+  justify-content: flex-end;
+  margin: 12px;
+  gap: 12px;
+}
+
+.cancel {
+  background-color: #d70036;
+  color: white;
+}
+
+.continue {
+  background-color: #3440b6;
+  color: white;
+}

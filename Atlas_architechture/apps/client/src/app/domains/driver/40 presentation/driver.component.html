@@ -1,0 +1,23 @@
+<h1> Drivers </h1>
+
+<div *ngIf="showSpinner$()" class="spinner-wrapper">
+  <mat-spinner class="spinner">Spinner</mat-spinner>
+</div>
+
+<button mat-raised-button color="primary"  class="addUser-btn" (click)="addDriver()">Add driver</button>
+<br>
+<div class="tables-wrapper">
+  <calypso-table
+    *ngIf="drivers$ | async as drivers"
+    [dataSource]="drivers"
+    [columns]="tableHeaders"
+    (updatedRow)="updateDriver($event)"
+    (deletedRow)="deleteDriver($event)">
+  </calypso-table>
+
+  <calypso-table
+    [dataSource]="driversAsSignal$()"
+    [columns]="tableHeaders"
+    (updatedRow)="updateDriver($event)">
+  </calypso-table>
+</div>

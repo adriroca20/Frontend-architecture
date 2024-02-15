@@ -1,0 +1,40 @@
+<form *ngIf="raceForm" [formGroup]="raceForm">
+  <h1 mat-dialog-title>
+    <strong>{{data.headerMessage}}</strong>
+  </h1>
+  <div class="container-fields" mat-dialog-content>
+    <mat-form-field appearance="outline">
+      <mat-label>Name </mat-label>
+      <input matInput formControlName="name" autocomplete="off" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Laps </mat-label>
+      <input matInput formControlName="laps" type="number" autocomplete="off" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Code </mat-label>
+      <input matInput formControlName="code" autocomplete="off" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Description </mat-label>
+      <input matInput formControlName="description" autocomplete="off" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Rating </mat-label>
+      <input matInput formControlName="starRating" type="number" autocomplete="off" />
+    </mat-form-field>
+  </div>
+  <div class="buttons-section" mat-dialog-actions>
+    <button mat-raised-button color="warn" (click)="closeDialog()">
+      Cancel
+    </button>
+    <ng-container [ngSwitch]="raceForm.valid">
+      <button *ngSwitchCase="true" mat-raised-button color="primary" (click)="onSubmit()">
+        {{data.action}}
+      </button>
+      <button *ngSwitchDefault mat-raised-button disabled matTooltip="Fill required fields. (*)">
+        {{data.action}}
+      </button>
+    </ng-container>
+  </div>
+</form>

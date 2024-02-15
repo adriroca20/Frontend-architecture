@@ -1,0 +1,26 @@
+{
+  "name": "calypso-table",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/frontend/calypso-components/calypso-table/src",
+  "prefix": "atlas",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/frontend/calypso-components/calypso-table/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/frontend/calypso-components/calypso-table/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/frontend/calypso-components/calypso-table/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}

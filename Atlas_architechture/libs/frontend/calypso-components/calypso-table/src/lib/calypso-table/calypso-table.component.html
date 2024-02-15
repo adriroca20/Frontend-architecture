@@ -1,0 +1,87 @@
+<!-- Table  -->
+<div class="table_container mat-elevation-z8">
+  <div class="table-paginator">
+    <div class="table-mat-mdc-table">
+      <table mat-table class="table" [dataSource]="dataSource" [trackBy]="trackByItems" matSort>
+
+        <!-- Dynamic content -->
+        <ng-container>
+          <ng-container *ngFor="let label of columns" matColumnDef="{{ label.name }}">
+            
+            <!-- Headers with a default alignment [class.column-boolean] -->
+            <th mat-header-cell class="column"
+              *matHeaderCellDef
+              mat-sort-header
+              [class.column-standard]="label.type === columnTypes.Standard"
+              [class.column-date]="label.type === columnTypes.Date"
+              [class.column-date-time]="label.type === columnTypes.DateTime"
+              [class.column-left-aligned]="label.align === alignment.Left"
+              [class.column-center-aligned]="label.align === alignment.Center"
+              [class.column-right-aligned]="label.align === alignment.Right">{{label.displayName}}</th>
+              <!-- Don't break the </th> on other line, it will add an empty space in the table header. -->
+  
+            <!-- Cells with a default alignment [class.column-boolean] -->
+            <td mat-cell *matCellDef="let element; let rowNumber = index;"
+              [class.column-standard]="label.type === columnTypes.Standard"
+              [class.column-boolean]="label.type === columnTypes.Boolean"
+              [class.column-date]="label.type === columnTypes.Date"
+              [class.column-date-time]="label.type === columnTypes.DateTime"
+              [class.column-left-aligned]="label.align === alignment.Left"
+              [class.column-center-aligned]="label.align === alignment.Center"
+              [class.column-right-aligned]="label.align === alignment.Right">
+  
+              <!-- Cell format for desktop view -->
+              <div  class="desktop-content">
+                <div *ngIf="label.type === columnTypes.Date">
+                  {{ element[label.name] | date: 'dd/MM/yyyy' }}
+                </div>
+                <div *ngIf="label.type === columnTypes.DateTime">
+                  {{ element[label.name] | date: 'dd/MM/yyyy HH:mm' }}
+                </div>
+                <div *ngIf="label.type === columnTypes.Boolean">
+                  <mat-icon class="boolean_true" *ngIf="element[label.name]">done</mat-icon>
+                  <mat-icon class="boolean_false" *ngIf="!element[label.name]">close</mat-icon>
+                </div>
+                <div *ngIf="label.type === columnTypes.Standard">
+                  {{ element[label.name] }}
+                </div>
+              </div>
+            </td>
+          </ng-container>
+        </ng-container>
+
+        <!-- Actions -->
+        <ng-container *ngIf="showActions" matColumnDef="action">
+          <th mat-header-cell class="final_column_header" *matHeaderCellDef >Actions</th>
+          <td mat-cell *matCellDef="let row" class="final_column" >
+
+            <!-- Desktop -->
+            <span class="desktop-content">
+              <ng-container *ngIf="showDefaultActions">
+                <button matTooltip="Wizjigen" mat-icon-button (click)="updateRow(row)">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button matTooltip="Verwijderen" mat-icon-button (click)="deleteRow(row)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </ng-container>
+            </span>
+          </td>
+        </ng-container>
+
+        <!-- Content -->
+        <tr mat-header-row *matHeaderRowDef="columnLabels" class="table_header"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnLabels;">
+        </tr>
+      </table>
+    </div>
+    <ng-container *ngIf="showPaginators">
+      <mat-paginator
+        [pageSizeOptions]="pageSizeOptions"
+        [pageSize]="pageSize"
+        [hidePageSize]="hidePageSize"
+        [showFirstLastButtons]="showFirstLastButtonsOfPaginator">
+      </mat-paginator>
+    </ng-container>
+  </div>
+</div>

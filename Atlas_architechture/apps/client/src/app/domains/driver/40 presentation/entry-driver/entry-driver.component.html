@@ -1,0 +1,60 @@
+<form *ngIf="driverForm" [formGroup]="driverForm">
+  <h1 mat-dialog-title>
+    <strong>{{data.headerMessage}}</strong>
+  </h1>
+  <div class="container-fields" mat-dialog-content>
+    <mat-form-field appearance="outline">
+      <mat-label> Name </mat-label>
+      <input matInput formControlName="firstName" autocomplete="off" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Last name</mat-label>
+      <input matInput formControlName="lastName" autocomplete="off" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Age </mat-label>
+      <input matInput formControlName="age" type="number" autocomplete="off" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Nationality </mat-label>
+      <mat-select formControlName="nationalityId">
+        <mat-option *ngFor="let nationality of data.nationalities" [value]="nationality.id">
+          {{nationality.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Wins </mat-label>
+      <input matInput formControlName="wins" type="number" autocomplete="off" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Teams </mat-label>
+      <mat-select formControlName="teamsIds" multiple>
+        <mat-option *ngFor="let team of data.teams" [value]="team.id">
+          {{team.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Current team </mat-label>
+      <mat-select formControlName="currentTeamId">
+        <mat-option *ngFor="let team of data.teams" [value]="team.id">
+          {{team.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="buttons-section" mat-dialog-actions>
+    <button mat-raised-button color="warn" (click)="closeDialog()">
+      Cancel
+    </button>
+    <ng-container [ngSwitch]="driverForm.valid">
+      <button *ngSwitchCase="true" mat-raised-button color="primary" (click)="onSubmit()">
+        {{data.action}}
+      </button>
+      <button *ngSwitchDefault mat-raised-button disabled matTooltip="Fill mandatory fields. (*)">
+        {{data.action}}
+      </button>
+    </ng-container>
+  </div>
+</form>

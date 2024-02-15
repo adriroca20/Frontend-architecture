@@ -1,0 +1,31 @@
+:host {
+  box-sizing: border-box;
+  display: block;
+  padding: 24px;
+
+  button {
+    margin-bottom: 1rem;
+  }
+
+  .tables-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .spinner-wrapper {
+    box-sizing: border-box;
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    .spinner {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+}

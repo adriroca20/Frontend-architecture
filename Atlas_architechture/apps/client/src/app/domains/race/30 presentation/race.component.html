@@ -1,0 +1,8 @@
+<h1> Races </h1>
+<!-- <button mat-raised-button color="primary" class="addUser-btn" (click)="addRace()">Add race</button> -->
+
+  <calypso-table
+    [dataSource]="racesAsSignal$()"
+    [columns]="tableHeaders"
+    (updatedRow)="updateRace($event)">
+  </calypso-table>

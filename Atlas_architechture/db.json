@@ -1,0 +1,427 @@
+{
+  "drivers": [
+    {
+      "id": 14,
+      "firstName": "Fernando",
+      "lastName": "Alonso",
+      "age": 42,
+      "wins": 33,
+      "nationality": {
+        "name": "Spain",
+        "id": 1
+      },
+      "teams": [
+        {
+          "id": 1,
+          "name": "Renault"
+        },
+        {
+          "id": 2,
+          "name": "McLaren"
+        },
+        {
+          "id": 3,
+          "name": "Ferrari"
+        },
+        {
+          "id": 4,
+          "name": "Alpine"
+        },
+        {
+          "id": 5,
+          "name": "Aston Martin"
+        }
+      ],
+      "currentTeam": {
+        "id": 5,
+        "name": "Aston Martin"
+      }
+    },
+    {
+      "id": 55,
+      "firstName": "Carlos",
+      "lastName": "Sainz",
+      "age": 29,
+      "nationality": {
+        "name": "Spain",
+        "id": 1
+      },
+      "wins": 2,
+      "teams": [
+        {
+          "name": "Toro Rosso",
+          "id": 6
+        },
+        {
+          "name": "McLaren",
+          "id": 2
+        },
+        {
+          "name": "Ferrari",
+          "id": 3
+        }
+      ],
+      "currentTeam": {
+        "name": "Ferrari",
+        "id": 3
+      }
+    },
+    {
+      "id": 1,
+      "firstName": "Max",
+      "lastName": "Verstappen",
+      "age": 26,
+      "nationality": {
+        "name": "Netherlands",
+        "id": 2
+      },
+      "wins": 53,
+      "teams": [
+        {
+          "name": "Red Bull",
+          "id": 7
+        }
+      ],
+      "currentTeam": {
+        "name": "Red Bull",
+        "id": 7
+      }
+    },
+    {
+      "id": 44,
+      "firstName": "Lewis",
+      "lastName": "Hamilton",
+      "age": 38,
+      "nationality": {
+        "name": "United Kingdom",
+        "id": 3
+      },
+      "wins": 103,
+      "teams": [
+        {
+          "name": "McLaren",
+          "id": 2
+        },
+        {
+          "name": "Mercedes",
+          "id": 8
+        }
+      ],
+      "currentTeam": {
+        "name": "Mercedes",
+        "id": 8
+      }
+    },
+    {
+      "id": 16,
+      "firstName": "Charles",
+      "lastName": "Leclerc",
+      "age": 25,
+      "nationality": {
+        "name": "Monaco",
+        "id": 4
+      },
+      "wins": 4,
+      "teams": [
+        {
+          "name": "Sauber",
+          "id": 9
+        },
+        {
+          "name": "Ferrari",
+          "id": 3
+        }
+      ],
+      "currentTeam": {
+        "name": "Ferrari",
+        "id": 3
+      }
+    },
+    {
+      "id": 11,
+      "firstName": "Sergio",
+      "lastName": "Perez",
+      "age": 33,
+      "nationality": {
+        "name": "Mexico",
+        "id": 5
+      },
+      "wins": 4,
+      "teams": [
+        {
+          "name": "Sauber",
+          "id": 9
+        },
+        {
+          "name": "McLaren",
+          "id": 2
+        },
+        {
+          "name": "Force India",
+          "id": 10
+        },
+        {
+          "name": "Racing Point",
+          "id": 11
+        },
+        {
+          "name": "Red Bull",
+          "id": 7
+        }
+      ],
+      "currentTeam": {
+        "name": "Red Bull",
+        "id": 7
+      }
+    },
+    {
+      "id": 77,
+      "firstName": "Valtteri",
+      "lastName": "Bottas",
+      "age": 34,
+      "nationality": {
+        "name": "Finland",
+        "id": 6
+      },
+      "wins": 10,
+      "teams": [
+        {
+          "name": "Williams",
+          "id": 12
+        },
+        {
+          "name": "Mercedes",
+          "id": 8
+        },
+        {
+          "name": "Alfa Romeo",
+          "id": 13
+        }
+      ],
+      "currentTeam": {
+        "name": "Alfa Romeo",
+        "id": 13
+      }
+    },
+    {
+      "id": 3,
+      "firstName": "Daniel",
+      "lastName": "Ricciardo",
+      "age": 33,
+      "nationality": {
+        "name": "Australia",
+        "id": 7
+      },
+      "wins": 8,
+      "teams": [
+        {
+          "name": "HRT",
+          "id": 14
+        },
+        {
+          "name": "Toro Rosso",
+          "id": 6
+        },
+        {
+          "name": "Red Bull",
+          "id": 7
+        },
+        {
+          "name": "Renault",
+          "id": 1
+        },
+        {
+          "name": "McLaren",
+          "id": 2
+        }
+      ],
+      "currentTeam": {
+        "name": "McLaren",
+        "id": 2
+      }
+    },
+    {
+      "id": 79,
+      "firstName": "Jordan",
+      "lastName": "qq",
+      "age": 22,
+      "wins": 1,
+      "nationality": {
+        "name": "Spain",
+        "id": 1
+      },
+      "teams": [
+        {
+          "id": 1,
+          "name": "Renault"
+        }
+      ],
+      "currentTeam": {
+        "id": 1,
+        "name": "Renault"
+      }
+    }
+  ],
+  "countries": [
+    {
+      "name": "Spain",
+      "id": 1
+    },
+    {
+      "name": "Netherlands",
+      "id": 2
+    },
+    {
+      "name": "United Kingdom",
+      "id": 3
+    },
+    {
+      "name": "Monaco",
+      "id": 4
+    },
+    {
+      "name": "Mexico",
+      "id": 5
+    },
+    {
+      "name": "Finland",
+      "id": 6
+    },
+    {
+      "name": "Australia",
+      "id": 7
+    }
+  ],
+  "teams": [
+    {
+      "name": "Renault",
+      "id": 1
+    },
+    {
+      "name": "McLaren",
+      "id": 2
+    },
+    {
+      "name": "Ferrari",
+      "id": 3
+    },
+    {
+      "name": "Alpine",
+      "id": 4
+    },
+    {
+      "name": "Aston Martin",
+      "id": 5
+    },
+    {
+      "name": "Toro Rosso",
+      "id": 6
+    },
+    {
+      "name": "Red Bull",
+      "id": 7
+    },
+    {
+      "name": "Mercedes",
+      "id": 8
+    },
+    {
+      "name": "Sauber",
+      "id": 9
+    },
+    {
+      "name": "Force India",
+      "id": 10
+    },
+    {
+      "name": "Racing Point",
+      "id": 11
+    },
+    {
+      "name": "Williams",
+      "id": 12
+    },
+    {
+      "name": "Alfa Romeo",
+      "id": 13
+    },
+    {
+      "name": "HRT",
+      "id": 14
+    }
+  ],
+  "races": [
+    {
+      "id": 1,
+      "name": "Bahrain Grand Prix",
+      "code": "BAH",
+      "description": "The Bahrain Grand Prix is a Formula One Championship (Date: 2022-03-20)",
+      "starRating": 4.5,
+      "laps": 70
+    },
+    {
+      "id": 2,
+      "name": "Saudi Arabian Grand Prix",
+      "code": "SAU",
+      "description": "The Saudi Arabian Grand Prix is a Formula One Championship (Date: 2022-03-27)",
+      "starRating": 4,
+      "laps": 50
+    },
+    {
+      "id": 3,
+      "name": "Australian Grand Prix",
+      "code": "AUS",
+      "description": "The Australian Grand Prix is a Formula One Championship (Date: 2022-04-10)",
+      "starRating": 3,
+      "laps": 58
+    },
+    {
+      "id": 4,
+      "name": "Vietnamese Grand Prix",
+      "code": "VIE",
+      "description": "The Vietnamese Grand Prix is a Formula One Championship (Date: 2022-04-24)",
+      "starRating": 2,
+      "laps": 55
+    },
+    {
+      "id": 5,
+      "name": "Chinese Grand Prix",
+      "code": "CHN",
+      "description": "The Chinese Grand Prix is a Formula One Championship (Date: 2022-05-01)",
+      "starRating": 3.5,
+      "laps": 56
+    },
+    {
+      "id": 6,
+      "name": "Spanish Grand Prix",
+      "code": "ESP",
+      "description": "The Spanish Grand Prix is a Formula One Championship (Date: 2022-05-08)",
+      "starRating": 2,
+      "laps": 66
+    },
+    {
+      "id": 7,
+      "name": "Monaco Grand Prix",
+      "code": "MON",
+      "description": "The Monaco Grand Prix is a Formula One Championship (Date: 2022-05-22)",
+      "starRating": 4.2,
+      "laps": 78
+    },
+    {
+      "id": 8,
+      "name": "Azerbaijan Grand Prix",
+      "code": "AZE",
+      "description": "The Azerbaijan Grand Prix is a Formula One Championship (Date: 2022-06-05)",
+      "starRating": 4.8,
+      "laps": 51
+    },
+    {
+      "id": 9,
+      "name": "Canadian Grand Prix",
+      "code": "CAN",
+      "description": "The Canadian Grand Prix is a Formula One Championship (Date: 2022-06-12)",
+      "starRating": 5,
+      "laps": 70
+    }
+  ]
+}

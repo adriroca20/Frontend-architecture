@@ -1,0 +1,16 @@
+<h1 class="header" mat-dialog-title>
+  {{data.headerMessage}}
+</h1>
+<div class="content" mat-dialog-content>
+  <ng-container *ngFor="let key of data.keys; let i = index">
+    <p>{{data.labels[i]}}: {{data.item[key]}}</p>
+  </ng-container>
+</div>
+<div class="buttons-section" mat-dialog-actions>
+  <button mat-raised-button class="cancel" (click)="closeDialog()">
+    Cancel
+  </button>
+  <button mat-raised-button class="continue" (click)="onSubmit()">
+    Delete
+  </button>
+</div>
